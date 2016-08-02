@@ -1,39 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
 
-<p>
-  <strong>User:</strong>
-  <%= @task.user %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @task.title %>
-</p>
+    <h2>タスク詳細情報</h2>
 
-<p>
-  <strong>Content:</strong>
-  <%= @task.content %>
-</p>
+    <p>
+      <strong>タイトル：</strong>
+      <%= @task.title %>
+    </p>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @task.deadline %>
-</p>
+    <p>
+      <strong>内　　容：</strong>
+      <%= @task.content %>
+    </p>
 
-<p>
-  <strong>Charge:</strong>
-  <%= @task.charge_id %>
-</p>
+    <p>
+      <strong>期　　限：</strong>
+      <%= @task.deadline %>
+    </p>
 
-<p>
-  <strong>Done:</strong>
-  <%= @task.done %>
-</p>
+    <p>
+      <strong>担 当 者：</strong>
+      <%= @task.charge %>
+    </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @task.status %>
-</p>
+    <p>
+      <strong>進捗状況：</strong>
+      <%= @task.status == 2? "完了" : "対応中" %>
+    </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+    <%= link_to '編集', edit_task_path(@task) %> |
+    <%= link_to '戻る', tasks_path %>
+
+  </div>
+</div>
